@@ -1,5 +1,28 @@
 # Contributing
 
+<!-- TOC -->
+
+* [Contributing](#contributing)
+    * [Development Flow](#development-flow)
+    * [Coding Style](#coding-style)
+    * [Commit Signature](#commit-signature)
+    * [Commit Message](#commit-message)
+        * [Commit Message Format](#commit-message-format)
+
+<!-- TOC -->
+
+## Development Flow
+
+TODO
+
+## Coding Style
+
+TODO
+
+## Commit Signature
+
+TODO
+
 ## Commit Message
 
 ### Commit Message Format
