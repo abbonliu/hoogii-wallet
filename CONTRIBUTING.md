@@ -1,19 +1,55 @@
 # Contributing
 
-<!-- TOC -->
-
-* [Contributing](#contributing)
-    * [Development Flow](#development-flow)
-    * [Coding Style](#coding-style)
-    * [Commit Signature](#commit-signature)
-    * [Commit Message](#commit-message)
-        * [Commit Message Format](#commit-message-format)
-
-<!-- TOC -->
-
 ## Development Flow
 
-TODO
+We use [Trunk-based development](https://trunkbaseddevelopment.com/).
+
+A source-control branching model, where developers collaborate on code in a single branch called 'trunk' \*, resist any
+pressure to create other long-lived development branches by employing documented techniques. They therefore avoid merge
+hell, do not break the build, and live happily ever after.
+
+**Trunk-Based Development For Smaller Teams**
+![trunk1b](./docs/img/out/trunk1b.png)
+
+### Example
+
+```mermaid
+%%{init: { 'logLevel': 'debug', 'theme': 'base' } }%%
+gitGraph
+    commit
+    branch release-1.12
+    checkout release-1.12
+    commit
+    merge main tag: "1.12.0"
+    checkout main
+    commit id: "bug fix"
+    commit
+    branch feat/hoogii-1
+    branch feat/hoogii-2
+    branch feat/hoogii-3
+    checkout feat/hoogii-1
+    commit id: "feat: added entity"
+    commit id: "feat: added business logic"
+    checkout main
+    merge feat/hoogii-1
+    checkout feat/hoogii-3
+    commit
+    checkout feat/hoogii-2
+    commit
+    merge feat/hoogii-3
+    checkout main
+    merge feat/hoogii-2
+    checkout release-1.12
+    merge main tag: "1.12.1"
+    commit tag: "1.12.2"
+    checkout main
+    commit
+    commit
+    branch release-2.0
+    commit tag: "2.0.0"
+    checkout main
+    commit
+```
 
 ## Coding Style
 
